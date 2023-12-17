@@ -1,18 +1,7 @@
 <?php
     if(isset($_POST['fname']) && isset($_FILES['profile']))
     {
-        $hname = 'localhost';
-        $uname = 'root';
-        $pass = '';
-        $db = 'php_projects';
-
-        $con = mysqli_connect($hname, $uname, $pass, $db);
-
-        if($con){
-        }
-        else{
-            die(mysqli_error($con));
-        }
+        include('db_config.php');
 
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
